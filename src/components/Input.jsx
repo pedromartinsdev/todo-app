@@ -14,8 +14,12 @@ export function Input() {
     event.target.todo.value = ''
   }
 
-  function deleteTodo(task){
-    console.log(`Deletar todo ${task}`)
+  function deleteTodo(taskToDelete){
+    const todosWithoutDeleteOne = tasks.filter(task => {
+      return task.todo !== taskToDelete
+    })
+
+    setTasks(todosWithoutDeleteOne)
   }
 
   return (

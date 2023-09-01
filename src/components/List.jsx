@@ -19,8 +19,7 @@ export function List({ tasks, deleteTodo }) {
           }
           
           return (
-            // eslint-disable-next-line react/jsx-key
-            <div className={styles.todoWrapper} key={task}>
+            <div className={styles.todoWrapper} key={task.todo}>
               <div className={styles.content}>
                 {
                   
