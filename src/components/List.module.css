@@ -1,0 +1,108 @@
+.todoEmptyWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+
+  width: 46rem;
+  margin-top: 1.5rem;
+  padding: 4rem 1.5rem;
+
+  border-radius: 0.5rem;
+  border-top: 1px solid var(--gray-400);
+}
+
+.todoEmptyWrapper span:nth-child(2) {
+  color: var(--gray-300);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.todoWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+  max-width: 46rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  gap: 0.75rem;
+
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-400);
+  background: var(--gray-500);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+}
+
+
+.todoWrapper span {
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  font-weight: 400;
+  width: 100%;
+  text-align: start;
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+.content input[type="checkbox"]{
+  appearance: none;
+  height: 1.091rem;
+  min-width: 1.091rem;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  background-color: var(--gray-500);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content input[type="checkbox"]:hover{
+  background-color: rgba(78, 168, 222, 0.08);
+  cursor: pointer;
+}
+
+.content input[type="checkbox"]:checked::before{
+  position: absolute;
+  content: "\2713";
+  font-size: 1.1rem;
+  height: 1.091rem;
+  width: 1.091rem;
+  border-radius: 50%;
+
+  background-color: var(--purple-dark);
+  color: var(--gray-100);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content span.checked{
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.todoDelete{
+  min-width: calc(1.5rem + 10px);
+  min-height: calc(1.5rem + 10px);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.todoDelete:hover{
+  color: var(--danger);
+  background-color: var(--gray-400);
+  cursor: pointer;
+}

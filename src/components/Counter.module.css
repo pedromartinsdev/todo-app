@@ -1,0 +1,41 @@
+.counterWrapper {
+  width: 100%;
+  max-width: 46rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4rem 0 1.5rem 0;
+}
+
+.created,
+.checked {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.created span:first-child {
+  color: var(--blue);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.checked span:first-child {
+  color: var(--purple);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.created span:last-child,
+.checked span:last-child {
+  border-radius: 62.4375rem;
+  background: var(--gray-400);
+  padding: 0.125rem 0.5rem;
+
+  color: var(--gray-200);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: normal;
+}
