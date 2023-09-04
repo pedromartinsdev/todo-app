@@ -17,7 +17,6 @@ export function List({ tasks, deleteTodo }) {
           function handleDeleteTodo(){
             deleteTodo(task.todo)
           }
-          
           return (
             <div className={styles.todoWrapper} key={task.todo}>
               <div className={styles.content}>
