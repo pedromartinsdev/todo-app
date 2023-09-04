@@ -14,20 +14,26 @@ export function List({ tasks, deleteTodo, changeStatus }) {
     return (
       <ul>
         {tasks.map((task) => {
-          function handleDeleteTodo(){
-            deleteTodo(task.todo)
+          function handleDeleteTodo() {
+            deleteTodo(task.id);
           }
-          function handleChangeStatus(){
-            changeStatus(task)
+          function handleChangeStatus() {
+            changeStatus(task);
           }
           return (
-            <div className={styles.todoWrapper} key={task.todo+task.id}>
+            <div className={styles.todoWrapper} key={task.id}>
               <div className={styles.content}>
-                <input type="checkbox" onChange={handleChangeStatus}/>
-                {
-                  task.status === "checked" ?  <span className={styles.checked}>{task.todo}</span> : <span>{task.todo}</span>
-                }
-                <Trash size={24} className={styles.todoDelete} onClick={handleDeleteTodo} />
+                <input type="checkbox" onChange={handleChangeStatus} />
+                {task.status === "checked" ? (
+                  <span className={styles.checked}>{task.todo}</span>
+                ) : (
+                  <span>{task.todo}</span>
+                )}
+                <Trash
+                  size={24}
+                  className={styles.todoDelete}
+                  onClick={handleDeleteTodo}
+                />
               </div>
             </div>
           );

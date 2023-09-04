@@ -6,6 +6,7 @@ import styles from "./Input.module.css";
 
 export function Input() {
   const [tasks, setTasks] = useState([]);
+  const [id, setId] = useState(0);
 
   function changeStatus(task) {
     if (task.status === "") {
@@ -28,13 +29,14 @@ export function Input() {
   function handleCreateNewTask() {
     event.preventDefault();
     const newTask = event.target.todo.value;
-    setTasks([...tasks, { id: tasks.length, todo: newTask, status: "" }]);
+    setId(id + 1);
+    setTasks([...tasks, { id: id, todo: newTask, status: "" }]);
     event.target.todo.value = "";
   }
 
-  function deleteTodo(taskToDelete) {
+  function deleteTodo(idTaskToDelete) {
     const todosWithoutDeleteOne = tasks.filter((task) => {
-      return task.todo !== taskToDelete;
+      return task.id !== idTaskToDelete;
     });
 
     setTasks(todosWithoutDeleteOne);
