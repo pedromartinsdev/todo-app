@@ -47,6 +47,11 @@
   text-align: start;
 }
 
+.todoWrapper span.checked {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
 .content{
   display: flex;
   justify-content: space-between;
@@ -87,11 +92,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.content span.checked{
-  color: var(--gray-300);
-  text-decoration: line-through;
 }
 
 .todoDelete{

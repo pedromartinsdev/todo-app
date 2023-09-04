@@ -1,6 +1,7 @@
 import styles from "./Counter.module.css";
 
 export function Counter({tasks}) {
+  const todoChecked = tasks.filter((task) => task.status === "checked")
   return (
     <div className={styles.counterWrapper}>
       <div className={styles.created}>
@@ -9,7 +10,7 @@ export function Counter({tasks}) {
       </div>
       <div className={styles.checked}>
         <span>Concluídas</span>
-        <span>{`0 de ${tasks.length}`}</span>
+        <span>{`${todoChecked.length} de ${tasks.length}`}</span>
       </div>
     </div>
   );

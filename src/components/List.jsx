@@ -1,7 +1,7 @@
-import { ClipboardText, Trash } from "phosphor-react";
 import styles from "./List.module.css";
+import { ClipboardText, Trash } from "phosphor-react";
 
-export function List({ tasks, deleteTodo }) {
+export function List({ tasks, deleteTodo, changeStatus }) {
   if (tasks.length === 0) {
     return (
       <div className={styles.todoEmptyWrapper}>
@@ -17,14 +17,16 @@ export function List({ tasks, deleteTodo }) {
           function handleDeleteTodo(){
             deleteTodo(task.todo)
           }
+          function handleChangeStatus(){
+            changeStatus(task)
+          }
           return (
-            <div className={styles.todoWrapper} key={task.todo}>
+            <div className={styles.todoWrapper} key={task.todo+task.id}>
               <div className={styles.content}>
+                <input type="checkbox" onChange={handleChangeStatus}/>
                 {
-                  
+                  task.status === "checked" ?  <span className={styles.checked}>{task.todo}</span> : <span>{task.todo}</span>
                 }
-                <input type="checkbox"/>
-                <span>{task.todo}</span>
                 <Trash size={24} className={styles.todoDelete} onClick={handleDeleteTodo} />
               </div>
             </div>
