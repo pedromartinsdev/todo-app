@@ -2,7 +2,7 @@
 # Todo
 
 Realizado para o desafio da trilha ignite da Rocketseat.
-Soemnte o layout foi disponibilizado, o código é 100% original.
+Somente o layout foi disponibilizado, o código é 100% original.
 
 ![preview](/src/assets/to-do-app.gif)
 
