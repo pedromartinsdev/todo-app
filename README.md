@@ -8,12 +8,6 @@ Soemnte o layout foi disponibilizado, o código é 100% original.
 
 O Todo é um aplicativo simples de gerenciamento de tarefas que permite aos usuários criar, listar e acompanhar suas tarefas diárias.
 
-## Tabela de Conteúdos
-
-- [Todo](#todo)
-  - [Tabela de Conteúdos](#tabela-de-conteúdos)
-  - [Instalação](#instalação)
-
 ## Instalação
 
 Para usar o aplicativo Todo, siga estas etapas:
